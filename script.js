@@ -8,12 +8,7 @@ function submit(event) {
     let email = document.getElementById("email")
     let password = document.getElementById("password")
 
-    console.log(firstname.value);
-    console.log(lastname.value);
-    console.log(email.value);
-    console.log(password.value);  
+    firebase.auth().createUserWithEmailAndPassword(email.value, password.value) 
 }
 
-// parameter & argument
 form.addEventListener("submit", (e) => submit(e))
-

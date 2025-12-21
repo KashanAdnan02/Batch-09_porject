@@ -2,23 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-    <form id="form" class="flex gap-4 flex-col w-[400px] mx-auto h-screen justify-center">
-        <input id="firstname" class="border px-5 py-4 rounded-lg" type="text" placeholder="Enter your first name">
-        <input id="lastname" class="border px-5 py-4 rounded-lg" type="text" placeholder="Enter your last name">
-        <input id="email" class="border px-5 py-4 rounded-lg" type="text" placeholder="Enter your email address">
-        <input id="password" class="border px-5 py-4 rounded-lg" type="text" placeholder="Enter your password">
-        <button class="bg-[#6D54B5] text-white px-7 py-3 rounded-lg">Create account</button>
-    </form>
+  <div class="w-full h-screen flex items-center justify-center">
+    <div class="mx-auto flex gap-6 border px-5 py-4 rounded-lg w-[70%] bg-black text-white justify-center items-center">
+      <div class="w-[50%] bg-cover bg-center rounded-lg h-[600px] flex flex-col pb-6 justify-between"
+        style="background-image: url('https://4kwallpapers.com/images/wallpapers/laptop-windows-11-1920x1080-10874.jpg');">
+        <div class="flex gap-70 mt-4 w-full justify-between items-center">
+          <div class="font-bold text-white ml-4">AMU</div>
+          <button class="right-8 bg-white/20 px-4 py-2 rounded-full text-sm">
+            Back to website →
+          </button>
+        </div>
+        <div class="">
+          <h2 class="text-2xl font-light ml-36">
+            Capturing Moments,<br />Creating Memories
+          </h2>
 
-    <script src="./script.js"></script>
+          <div class="flex gap-2 mt-4 ml-47">
+            <div class="w-5 h-1 rounded bg-white/40"></div>
+            <div class="w-5 h-1 rounded bg-white/40"></div>
+            <div class="w-5 h-1 rounded bg-white"></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[50%]">
+        <h1 class="text-3xl font-bold">Create an account</h1><br>
+        <div class="flex gap-2">
+          <p>Already have an account?</p>
+          <p class="underline">Login</p>
+        </div><br>
+        <form id="form" class="flex gap-4 flex-col ">
+          <div class="flex gap-4">
+            <input id="firstname" class="border px-5 py-4 rounded-lg w-[50%]" type="text"
+              placeholder="Enter your first name">
+            <input id="lastname" class="border px-5 py-4 rounded-lg w-[50%]" type="text"
+              placeholder="Enter your last name">
+          </div>
+          <input id="email" class="border px-5 py-4 rounded-lg w-full" type="text"
+            placeholder="Enter your email address">
+          <input id="password" class="border px-5 py-4 rounded-lg w-full" type="text" placeholder="Enter your password">
+          <div class="flex gap-4"><i class="fa-regular fa-square-check"></i>
+            <p>I agree to the</p>
+            <p class="underline">terms and conditions</p>
+          </div>
+          <button class="bg-[#6D54B5] text-white px-7 py-3 rounded-lg w-full">Create account</button>
+          <div class="flex items-center text-gray-400 mb-6">
+            <div class="flex-1 h-px bg-gray-600"></div>
+            <div class="px-3 text-m">Or register with</div>
+            <div class="flex-1 h-px bg-gray-600"></div>
+          </div>
+          <div class="flex gap-2">
+            <button class="border px-4 py-2 rounded-lg w-[50%] items-center flex gap-2">
+              <i class="fa-brands fa-google"></i>
+              <p>Google</p>
+            </button>
+            <button class="border px-4 py-2 rounded-lg w-[50%] items-center flex gap-2">
+              <i class="fa-brands fa-apple"></i>
+              <p>Apple</p>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- // Javascript
+// CommonJS
+// ModuleJs -->
+  <!-- Firebase App (core) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <!-- Firebase Authentication -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <script type="module">
+    const firebaseConfig = {
+      apiKey: "AIzaSyC5KJ1FfpSDifbcmB2AMCLhYqTle1EogKI",
+      authDomain: "batch09class.firebaseapp.com",
+      projectId: "batch09class",
+      storageBucket: "batch09class.firebasestorage.app",
+      messagingSenderId: "666019402322",
+      appId: "1:666019402322:web:aeb290baeda2a31e01458b"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
